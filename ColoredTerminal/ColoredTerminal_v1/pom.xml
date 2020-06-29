@@ -8,4 +8,42 @@
     <artifactId>coloredterm</artifactId>
     <version>0.1</version>
 
+
+	<dependencies>
+	    <dependency>
+		    <groupId>com.diogonunes</groupId>
+		    <artifactId>JCDP</artifactId>
+		    <version>2.0.3.1</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+	    		<groupId>org.apache.maven.plugins</groupId>
+	    		<artifactId>maven-assembly-plugin</artifactId>
+	    		<executions>
+	        		<execution>
+	            		<phase>package</phase>
+	            		<goals>
+	                	<goal>single</goal>
+	            		</goals>
+	            		<configuration>
+	                	<archive>
+	                	<manifest>
+	                    	<mainClass>
+	                        	ru.dfr8938.Program
+	                    	</mainClass>
+	                	</manifest>
+	                	</archive>
+	                	<descriptorRefs>
+	                    	<descriptorRef>jar-with-dependencies</descriptorRef>
+	                	</descriptorRefs>
+	            		</configuration>
+	        		</execution>
+	    		</executions>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
