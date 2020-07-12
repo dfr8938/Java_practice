@@ -11,8 +11,8 @@ public class CostCalculator {
 		this.kgCost = kgCost;
 	}
 
-	public double costCalc(Box box, int km) {
+	public double costCalc(double kg, int km) {
 
-		return box.getWeight() * kgCost + km * kmCost;
+		return kg * kgCost + km * kmCost;
 	}
 }

@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 
 public class HelloServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         PrintWriter writer = resp.getWriter();
         writer.write("<h1>Hello!!!</h1>");
         writer.write("<h2>Hello!!!</h2>");
